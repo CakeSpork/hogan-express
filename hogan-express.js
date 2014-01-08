@@ -136,6 +136,11 @@
       lambda = lambdas[name];
       _fn(name, lambda);
     }
+    
+    for (lambda in opt.lambdas){
+    	opt[lambda] = opt.lambdas[lambda];
+    }
+    
     return renderPartials(partials, opt, function(err, partials) {
       var layout;
       if (err) {
